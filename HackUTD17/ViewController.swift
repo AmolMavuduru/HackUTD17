@@ -7,8 +7,23 @@
 //
 
 import UIKit
+import BuddySDK
+import TesseractOCR
 
 class ViewController: UIViewController {
+    
+    
+    @IBOutlet var usernameField: UITextField!
+    @IBOutlet var passwordField: UITextField!
+    
+    @IBOutlet var loginOrSignUpButton: UIButton!
+    @IBOutlet var changeModeButton: UIButton!
+    
+    @IBOutlet var suggestionLabel: UILabel!
+    
+    var loginMode: Bool = true;
+    var signUpMode: Bool = false;
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +35,61 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func changeSignUpMode(_ sender: UIButton) {
+        
+        if(loginMode)
+        {
+            loginMode = false
+            signUpMode = true
+            suggestionLabel.text = "Already have an account?"
+            changeModeButton.setTitle("Login", for: [])
+        }
+        else
+        {
+            signUpMode = false
+            loginMode = true
+            suggestionLabel.text = "Don't have an account?"
+            changeModeButton.setTitle("Sign Up", for: [])
+        }
+        
+
+        
+    }
+    
+    
+    @IBAction func loginOrSignup(_ sender: UIButton) {
+        
+        if loginMode
+        {
+            Buddy.loginUser(usernameField.text, password: passwordField.text, callback: { (Success, error) in
+                if(error != nil)
+                {
+                    print(error)
+                }
+                else
+                {
+                    print("User logged in!")
+                }
+            })
+        }
+        else
+        {
+            Buddy.createUser(usernameField.text, password: passwordField.text, firstName: nil, lastName: nil, email: nil, dateOfBirth: nil, gender: nil, tag: nil, callback: { (success, error) in
+                
+                if(error != nil)
+                {
+                    print(error)
+                }
+                else
+                {
+                    print("User signed up!")
+                }
+            })
+        }
+
+        
+    }
+    
 
 }
 

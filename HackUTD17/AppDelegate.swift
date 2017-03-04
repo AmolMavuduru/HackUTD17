@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import BuddySDK
+import TesseractOCR
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        Buddy.init("bbbbbc.tMJbrtFPgdhxc", appKey: "c891c8f9-18e1-f49b-2350-96269ca79695");
         return true
     }
 

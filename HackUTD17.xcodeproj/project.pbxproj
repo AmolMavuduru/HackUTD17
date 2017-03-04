@@ -12,6 +12,7 @@
 		3CE71CAE1E6B360800BDD634 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CE71CAC1E6B360800BDD634 /* Main.storyboard */; };
 		3CE71CB01E6B360800BDD634 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CE71CAF1E6B360800BDD634 /* Assets.xcassets */; };
 		3CE71CB31E6B360800BDD634 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CE71CB11E6B360800BDD634 /* LaunchScreen.storyboard */; };
+		3CE71CBB1E6B45DA00BDD634 /* UserSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE71CBA1E6B45DA00BDD634 /* UserSetupViewController.swift */; };
 		FFFB1FE91C53F12B3F3F9587 /* Pods_HackUTD17.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A51F32C5B9983824B201C5 /* Pods_HackUTD17.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		3CE71CAF1E6B360800BDD634 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CE71CB21E6B360800BDD634 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3CE71CB41E6B360800BDD634 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CE71CBA1E6B45DA00BDD634 /* UserSetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSetupViewController.swift; sourceTree = "<group>"; };
 		7175B0FE3C56528D3809FF00 /* Pods-HackUTD17.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackUTD17.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackUTD17/Pods-HackUTD17.debug.xcconfig"; sourceTree = "<group>"; };
 		C4A51F32C5B9983824B201C5 /* Pods_HackUTD17.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackUTD17.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4833BEB88AA340B5120AF4B /* Pods-HackUTD17.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackUTD17.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackUTD17/Pods-HackUTD17.release.xcconfig"; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				3CE71CA81E6B360800BDD634 /* AppDelegate.swift */,
 				3CE71CAA1E6B360800BDD634 /* ViewController.swift */,
 				3CE71CAC1E6B360800BDD634 /* Main.storyboard */,
+				3CE71CBA1E6B45DA00BDD634 /* UserSetupViewController.swift */,
 				3CE71CAF1E6B360800BDD634 /* Assets.xcassets */,
 				3CE71CB11E6B360800BDD634 /* LaunchScreen.storyboard */,
 				3CE71CB41E6B360800BDD634 /* Info.plist */,
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CE71CAB1E6B360800BDD634 /* ViewController.swift in Sources */,
+				3CE71CBB1E6B45DA00BDD634 /* UserSetupViewController.swift in Sources */,
 				3CE71CA91E6B360800BDD634 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,6 +381,7 @@
 				3CE71CB91E6B360800BDD634 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
