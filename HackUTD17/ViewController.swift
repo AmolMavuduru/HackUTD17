@@ -92,12 +92,8 @@ class ViewController: UIViewController {
                 
                 self.performSegue(withIdentifier: "goToUserSetup", sender: self)
             }
-            
-            
         
     }
     
-    
-
 }
 

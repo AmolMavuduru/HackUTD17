@@ -102,35 +102,6 @@
             </objects>
             <point key="canvasLocation" x="213.59999999999999" y="646.32683658170924"/>
         </scene>
-        <!--Root View Controller-->
-        <scene sceneID="aJ7-9R-Jd1">
-            <objects>
-                <tableViewController id="AgA-I0-uof" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ejc-yv-bMu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="suN-yB-rnm">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="suN-yB-rnm" id="WBd-zo-NYC">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="AgA-I0-uof" id="6qi-bA-zE1"/>
-                            <outlet property="delegate" destination="AgA-I0-uof" id="ZkU-DN-o9T"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="QCy-Ec-3Rh"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Rdj-7q-edn" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1930" y="681"/>
-        </scene>
         <!--User Setup View Controller-->
         <scene sceneID="No1-Al-WEc">
             <objects>
@@ -185,9 +156,12 @@
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="8ka-wT-37P">
                                 <rect key="frame" x="90" y="194" width="265" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="ageChanged:" destination="ofY-7y-pYY" eventType="valueChanged" id="2DD-wB-sxR"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZEc-hV-vg5">
-                                <rect key="frame" x="127" y="245" width="124" height="27"/>
+                                <rect key="frame" x="127" y="245" width="133" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -199,12 +173,14 @@
                                 <state key="normal" title="Update information"/>
                                 <connections>
                                     <action selector="updateUserInfo:" destination="ofY-7y-pYY" eventType="touchUpInside" id="6tN-q3-SzE"/>
+                                    <segue destination="Zhm-pP-syz" kind="show" id="UVi-lT-c4V"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="ageLabel" destination="ZEc-hV-vg5" id="RO9-g3-BKb"/>
                         <outlet property="ageSlider" destination="8ka-wT-37P" id="XHM-mK-jj9"/>
                         <outlet property="genderSwitch" destination="bMU-dH-xXy" id="xlw-Eg-mSH"/>
                     </connections>
@@ -213,21 +189,66 @@
             </objects>
             <point key="canvasLocation" x="917.60000000000002" y="639.13043478260875"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="a31-xG-6W9">
+        <!--Read Nutrition View Controller-->
+        <scene sceneID="Ziy-SW-EcE">
             <objects>
-                <navigationController id="zvk-6X-3cc" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1W8-Vf-MQu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
+                <viewController id="Zhm-pP-syz" customClass="ReadNutritionViewController" customModule="HackUTD17" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rzw-L9-yyk"/>
+                        <viewControllerLayoutGuide type="bottom" id="pbB-t8-OQ6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AFU-Mn-5WE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Get Nutrition Info!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftv-Fz-pJS">
+                                <rect key="frame" x="119" y="73" width="137" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NutritionLabel" translatesAutoresizingMaskIntoConstraints="NO" id="fkI-sA-ocg">
+                                <rect key="frame" x="52" y="135" width="271" height="215"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WMj-IS-BAg">
+                                <rect key="frame" x="67" y="431" width="240" height="187"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWu-bN-HQK">
+                                <rect key="frame" x="196" y="369" width="106" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Convert to Text"/>
+                                <connections>
+                                    <action selector="convertToText:" destination="Zhm-pP-syz" eventType="touchUpInside" id="CFC-Vu-aI1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6pH-4J-Mz6">
+                                <rect key="frame" x="82" y="369" width="74" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add Image"/>
+                                <connections>
+                                    <action selector="addImage:" destination="Zhm-pP-syz" eventType="touchUpInside" id="70v-fx-NMh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
                     <connections>
-                        <segue destination="AgA-I0-uof" kind="relationship" relationship="rootViewController" id="0ab-Us-kEe"/>
+                        <outlet property="image" destination="fkI-sA-ocg" id="fRX-99-F66"/>
+                        <outlet property="imageText" destination="WMj-IS-BAg" id="bnP-zy-WZd"/>
                     </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jx6-YP-JDG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FLQ-hk-URw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1602" y="507"/>
+            <point key="canvasLocation" x="1741.5999999999999" y="629.2353823088456"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NutritionLabel" width="300" height="670"/>
+    </resources>
 </document>

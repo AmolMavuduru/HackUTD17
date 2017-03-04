@@ -16,7 +16,7 @@ class UserSetupViewController: UIViewController {
     
     @IBOutlet var ageSlider: UISlider!
     
-    
+    @IBOutlet var ageLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +51,13 @@ class UserSetupViewController: UIViewController {
         }
         
     }
+    
+    @IBAction func ageChanged(_ sender: UISlider) {
+        
+        ageLabel.text = String(Int(115*ageSlider.value + 5)) + " years"
+        
+    }
+    
     
 
     /*
