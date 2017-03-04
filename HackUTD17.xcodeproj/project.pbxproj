@@ -16,6 +16,8 @@
 		3CE71CBD1E6B576F00BDD634 /* ReadNutritionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE71CBC1E6B576F00BDD634 /* ReadNutritionViewController.swift */; };
 		3CE71CCF1E6B71F300BDD634 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 3CE71CCE1E6B71F300BDD634 /* tessdata */; };
 		3CE71CD91E6B809200BDD634 /* NutritionLabel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3CE71CD81E6B809200BDD634 /* NutritionLabel.jpg */; };
+		3CE71CDB1E6B83AF00BDD634 /* IMG_1700.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 3CE71CDA1E6B83AF00BDD634 /* IMG_1700.JPG */; };
+		3CE71CDF1E6B85D500BDD634 /* Ingredients.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3CE71CDE1E6B85D500BDD634 /* Ingredients.jpg */; };
 		FFFB1FE91C53F12B3F3F9587 /* Pods_HackUTD17.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A51F32C5B9983824B201C5 /* Pods_HackUTD17.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +33,8 @@
 		3CE71CBC1E6B576F00BDD634 /* ReadNutritionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadNutritionViewController.swift; sourceTree = "<group>"; };
 		3CE71CCE1E6B71F300BDD634 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		3CE71CD81E6B809200BDD634 /* NutritionLabel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NutritionLabel.jpg; sourceTree = "<group>"; };
+		3CE71CDA1E6B83AF00BDD634 /* IMG_1700.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1700.JPG; sourceTree = "<group>"; };
+		3CE71CDE1E6B85D500BDD634 /* Ingredients.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Ingredients.jpg; sourceTree = "<group>"; };
 		7175B0FE3C56528D3809FF00 /* Pods-HackUTD17.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackUTD17.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackUTD17/Pods-HackUTD17.debug.xcconfig"; sourceTree = "<group>"; };
 		C4A51F32C5B9983824B201C5 /* Pods_HackUTD17.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackUTD17.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4833BEB88AA340B5120AF4B /* Pods-HackUTD17.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackUTD17.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackUTD17/Pods-HackUTD17.release.xcconfig"; sourceTree = "<group>"; };
@@ -73,7 +77,9 @@
 				3CE71CAA1E6B360800BDD634 /* ViewController.swift */,
 				3CE71CAC1E6B360800BDD634 /* Main.storyboard */,
 				3CE71CBC1E6B576F00BDD634 /* ReadNutritionViewController.swift */,
+				3CE71CDE1E6B85D500BDD634 /* Ingredients.jpg */,
 				3CE71CD81E6B809200BDD634 /* NutritionLabel.jpg */,
+				3CE71CDA1E6B83AF00BDD634 /* IMG_1700.JPG */,
 				3CE71CBA1E6B45DA00BDD634 /* UserSetupViewController.swift */,
 				3CE71CCE1E6B71F300BDD634 /* tessdata */,
 				3CE71CAF1E6B360800BDD634 /* Assets.xcassets */,
@@ -165,7 +171,9 @@
 			files = (
 				3CE71CB31E6B360800BDD634 /* LaunchScreen.storyboard in Resources */,
 				3CE71CB01E6B360800BDD634 /* Assets.xcassets in Resources */,
+				3CE71CDF1E6B85D500BDD634 /* Ingredients.jpg in Resources */,
 				3CE71CCF1E6B71F300BDD634 /* tessdata in Resources */,
+				3CE71CDB1E6B83AF00BDD634 /* IMG_1700.JPG in Resources */,
 				3CE71CAE1E6B360800BDD634 /* Main.storyboard in Resources */,
 				3CE71CD91E6B809200BDD634 /* NutritionLabel.jpg in Resources */,
 			);

@@ -10,6 +10,7 @@ import UIKit
 import BuddySDK
 import TesseractOCR
 
+
 class ReadNutritionViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, G8TesseractDelegate {
     
     
@@ -46,11 +47,15 @@ class ReadNutritionViewController: UIViewController, UINavigationControllerDeleg
         
         if let tesseract = G8Tesseract(language: "eng")
         {
+
             tesseract.delegate = self
-            tesseract.image = UIImage(named: "NutritionLabel.jpg")?.g8_blackAndWhite()
+            tesseract.image = UIImage(named: "Ingredients.jpg")?.g8_blackAndWhite()
             //tesseract.image = UIImage(named: "NutritionLabel.jpg")?.g8_grayScale()
-            //var grayScaleImage = tesseract.image.g8_grayScale()
-            //image.image = grayScaleImage
+            
+            var grayScaleImage = tesseract.image.g8_blackAndWhite()
+            image.image = grayScaleImage
+            
+            
             tesseract.recognize()
             
             imageText.text = tesseract.recognizedText
@@ -71,6 +76,8 @@ class ReadNutritionViewController: UIViewController, UINavigationControllerDeleg
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
     
 
     /*
