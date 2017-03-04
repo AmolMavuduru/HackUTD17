@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     @IBOutlet var passwordField: UITextField!
     
     @IBOutlet var loginOrSignUpButton: UIButton!
+   
+    
     @IBOutlet var changeModeButton: UIButton!
     
     @IBOutlet var suggestionLabel: UILabel!
@@ -35,60 +37,66 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
     @IBAction func changeSignUpMode(_ sender: UIButton) {
-        
-        if(loginMode)
-        {
-            loginMode = false
-            signUpMode = true
-            suggestionLabel.text = "Already have an account?"
-            changeModeButton.setTitle("Login", for: [])
-        }
-        else
-        {
-            signUpMode = false
-            loginMode = true
-            suggestionLabel.text = "Don't have an account?"
-            changeModeButton.setTitle("Sign Up", for: [])
-        }
-        
-
-        
-    }
-    
-    
-    @IBAction func loginOrSignup(_ sender: UIButton) {
-        
-        if loginMode
-        {
-            Buddy.loginUser(usernameField.text, password: passwordField.text, callback: { (Success, error) in
-                if(error != nil)
-                {
-                    print(error)
-                }
-                else
-                {
-                    print("User logged in!")
-                }
-            })
-        }
-        else
-        {
-            Buddy.createUser(usernameField.text, password: passwordField.text, firstName: nil, lastName: nil, email: nil, dateOfBirth: nil, gender: nil, tag: nil, callback: { (success, error) in
+            
+            if(loginMode)
+            {
+                loginMode = false
+                signUpMode = true
+                suggestionLabel.text = "Already have an account?"
+                changeModeButton.setTitle("Login", for: [])
+                loginOrSignUpButton.setTitle("Sign up", for: [])
+            }
+            else
+            {
+                signUpMode = false
+                loginMode = true
+                suggestionLabel.text = "Don't have an account?"
+                changeModeButton.setTitle("Sign Up", for: [])
+                loginOrSignUpButton.setTitle("Login", for: [])
                 
-                if(error != nil)
-                {
-                    print(error)
-                }
-                else
-                {
-                    print("User signed up!")
-                }
-            })
-        }
-
+            }
         
     }
+    
+    
+    @IBAction func loginOrSignUp(_ sender: UIButton) {
+            
+            if loginMode
+            {
+                Buddy.loginUser(usernameField.text, password: passwordField.text, callback: { (Success, error) in
+                    if(error != nil)
+                    {
+                        print(error)
+                    }
+                    else
+                    {
+                        print("User logged in!")
+                    }
+                })
+            }
+            else
+            {
+                Buddy.createUser(usernameField.text, password: passwordField.text, firstName: nil, lastName: nil, email: nil, dateOfBirth: nil, gender: nil, tag: nil, callback: { (success, error) in
+                    
+                    if(error != nil)
+                    {
+                        print(error)
+                    }
+                    else
+                    {
+                        print("User signed up!")
+                    }
+                })
+                
+                self.performSegue(withIdentifier: "goToUserSetup", sender: self)
+            }
+            
+            
+        
+    }
+    
     
 
 }

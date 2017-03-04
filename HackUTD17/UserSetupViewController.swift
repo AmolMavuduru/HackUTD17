@@ -7,8 +7,16 @@
 //
 
 import UIKit
+import BuddySDK
 
 class UserSetupViewController: UIViewController {
+    
+    
+    @IBOutlet var genderSwitch: UISwitch!
+    
+    @IBOutlet var ageSlider: UISlider!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +27,29 @@ class UserSetupViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    @IBAction func updateUserInfo(_ sender: UIButton) {
+        
+        if(genderSwitch.isOn)
+        {
+            var params: [AnyHashable: Any] = ["userName": "SuperBuddy", "password": "p4ssw0rd", "gender": "Male", "dateOfBirth": "09/01/2016", "email": "support@buddy.com", "firstName": "First", "tag": "Some useful tag", "lastName": "Last", "profilePictureID": "bvc.bCkbbffnqbvq", "locationFuzz": (true)]
+            Buddy.patch("User", parameters: params, class: Buddy.classForCoder(), callback: { (success, error) in
+                if error != nil {
+                    print(error)
+                
+                }
+                else {
+                    
+                    
+                }
+            })
+                // Your callback code here
+           
+
+        }
+        
     }
     
 
