@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C4B820D1E6C713F00638A11 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4B820C1E6C713F00638A11 /* StatsViewController.swift */; };
+		3C4B820F1E6C7F1300638A11 /* IngredientAllerg.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 3C4B820E1E6C7F1300638A11 /* IngredientAllerg.JPG */; };
 		3CE71CA91E6B360800BDD634 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE71CA81E6B360800BDD634 /* AppDelegate.swift */; };
 		3CE71CAB1E6B360800BDD634 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE71CAA1E6B360800BDD634 /* ViewController.swift */; };
 		3CE71CAE1E6B360800BDD634 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CE71CAC1E6B360800BDD634 /* Main.storyboard */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C4B820C1E6C713F00638A11 /* StatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
+		3C4B820E1E6C7F1300638A11 /* IngredientAllerg.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IngredientAllerg.JPG; sourceTree = "<group>"; };
 		3CE71CA51E6B360800BDD634 /* HackUTD17.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackUTD17.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CE71CA81E6B360800BDD634 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CE71CAA1E6B360800BDD634 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,11 +86,13 @@
 				3CE71CA81E6B360800BDD634 /* AppDelegate.swift */,
 				3CE71CAA1E6B360800BDD634 /* ViewController.swift */,
 				3CE71CAC1E6B360800BDD634 /* Main.storyboard */,
+				3C4B820C1E6C713F00638A11 /* StatsViewController.swift */,
 				3CE71CEA1E6BC4BF00BDD634 /* TableViewCell.swift */,
 				3CE71CBC1E6B576F00BDD634 /* ReadNutritionViewController.swift */,
 				3CE71CEE1E6BD3D200BDD634 /* ResultsViewController.swift */,
 				3CE71CE81E6BBFDC00BDD634 /* SwiftOCR */,
 				3CE71CDE1E6B85D500BDD634 /* Ingredients.jpg */,
+				3C4B820E1E6C7F1300638A11 /* IngredientAllerg.JPG */,
 				3CE71CD81E6B809200BDD634 /* NutritionLabel.jpg */,
 				3CE71CDA1E6B83AF00BDD634 /* IMG_1700.JPG */,
 				3CE71CBA1E6B45DA00BDD634 /* UserSetupViewController.swift */,
@@ -180,6 +186,7 @@
 			files = (
 				3CE71CB31E6B360800BDD634 /* LaunchScreen.storyboard in Resources */,
 				3CE71CE91E6BBFDC00BDD634 /* SwiftOCR in Resources */,
+				3C4B820F1E6C7F1300638A11 /* IngredientAllerg.JPG in Resources */,
 				3CE71CB01E6B360800BDD634 /* Assets.xcassets in Resources */,
 				3CE71CDF1E6B85D500BDD634 /* Ingredients.jpg in Resources */,
 				3CE71CCF1E6B71F300BDD634 /* tessdata in Resources */,
@@ -248,6 +255,7 @@
 				3CE71CAB1E6B360800BDD634 /* ViewController.swift in Sources */,
 				3CE71CBD1E6B576F00BDD634 /* ReadNutritionViewController.swift in Sources */,
 				3CE71CEF1E6BD3D200BDD634 /* ResultsViewController.swift in Sources */,
+				3C4B820D1E6C713F00638A11 /* StatsViewController.swift in Sources */,
 				3CE71CBB1E6B45DA00BDD634 /* UserSetupViewController.swift in Sources */,
 				3CE71CA91E6B360800BDD634 /* AppDelegate.swift in Sources */,
 			);

@@ -25,8 +25,8 @@ class ResultsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        var calories = UserDefaults.standard.value(forKey: "lastCalorieCheck") as! String + " g"
+        
+        var calories = UserDefaults.standard.value(forKey: "lastCalorieCheck") as! String
         caloriesLabel.text = "Calories: \(calories)"
         
         var fats = UserDefaults.standard.value(forKey: "lastFatCheck") as! String + " g"

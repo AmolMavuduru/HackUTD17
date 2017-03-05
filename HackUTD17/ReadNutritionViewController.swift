@@ -89,7 +89,7 @@ class ReadNutritionViewController: UIViewController, UINavigationControllerDeleg
             print(tesseract.recognizedText)
             
             infoStrings.append(tesseract.recognizedText)
-            
+       
             let infoString = tesseract.recognizedText
             var strings = infoString?.components(separatedBy: "Calories")
             print(strings)
@@ -97,6 +97,7 @@ class ReadNutritionViewController: UIViewController, UINavigationControllerDeleg
             let userDefaults = UserDefaults.standard.set(calorieList, forKey: "calorieList")
             
             UserDefaults.standard.set((strings?[1])!, forKey: "lastCalorieCheck")
+            UserDefaults.standard.setValue(calorieList, forKey: "calorieList")
             
             strings = infoString?.components(separatedBy: "Total Fat")
             
@@ -105,10 +106,13 @@ class ReadNutritionViewController: UIViewController, UINavigationControllerDeleg
             
                 var fatString = splitStrings[0] as! String
                 UserDefaults.standard.setValue(fatString, forKey: "lastFatCheck")
+                
+                fatList.append((splitStrings[1]))
+                let userDefaults = UserDefaults.standard.set(fatList, forKey: "fatList")
+                
             
             }
             
-            var allergies: String = UserDefaults.standard.value(forKey: "allergies") as! String
             
             strings = infoString?.components(separatedBy: "Total Carbohydrate")
             
@@ -117,6 +121,8 @@ class ReadNutritionViewController: UIViewController, UINavigationControllerDeleg
             
             var carbsString = stringSplit[0] as! String
             UserDefaults.standard.setValue(carbsString, forKey: "lastCarbsCheck")
+                carbsList.append(carbsString)
+                UserDefaults.standard.setValue(carbsList, forKey: "carbsList")
             }
             
             strings = infoString?.components(separatedBy: "Protein")
@@ -125,9 +131,14 @@ class ReadNutritionViewController: UIViewController, UINavigationControllerDeleg
             {
                 var proteinString = stringSplit2[0] as! String
                 UserDefaults.standard.setValue(proteinString, forKey: "lastProteinCheck")
+                proteinList.append(proteinString)
+                UserDefaults.standard.setValue(proteinList, forKey: "proteinList")
+                
             }
         
-            if(infoString?.contains(allergies))!
+            var allergies: String = UserDefaults.standard.value(forKey: "allergies") as! String
+            
+            if(infoStrings.contains(allergies))
             {
                 UserDefaults.standard.set(allergies, forKey: "allergiesFound")
             }

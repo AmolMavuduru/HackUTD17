@@ -24,7 +24,7 @@ class TableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        var caloriesList: [String] = UserDefaults.value(forKey: "caloriesList") as! [String]
+        var caloriesList: [String] = UserDefaults.standard.value(forKey: "caloriesList") as! [String]
         caloriesLabel.text = caloriesList[1];
         
         // Initialization code

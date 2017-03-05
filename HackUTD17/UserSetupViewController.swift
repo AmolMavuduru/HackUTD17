@@ -56,11 +56,11 @@ class UserSetupViewController: UIViewController {
                */
                 // Your callback code here
             var userMale = true;
-            var userDefaults = UserDefaults.standard
-            userDefaults.setValue(allergyField.text, forKey: "allergies")
-           
 
         }
+        
+        var userDefaults = UserDefaults.standard
+        userDefaults.setValue(allergyField.text, forKey: "allergies")
         
     }
     
