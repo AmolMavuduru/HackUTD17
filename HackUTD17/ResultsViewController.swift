@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import BuddySDK
+import TesseractOCR
 
 class ResultsViewController: UIViewController {
 
@@ -24,8 +26,17 @@ class ResultsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        var calories = UserDefaults.standard.value(forKey: "lastCalorieCheck")
+        var calories = UserDefaults.standard.value(forKey: "lastCalorieCheck") as! String + " g"
         caloriesLabel.text = "Calories: \(calories)"
+        
+        var fats = UserDefaults.standard.value(forKey: "lastFatCheck") as! String + " g"
+        fatsLabel.text = "Fats: \(fats)"
+        
+        var carbs = UserDefaults.standard.value(forKey: "lastCarbsCheck") as! String + " g"
+        carbsLabel.text = "Carbohydrates: \(carbs)"
+        
+        var protein = UserDefaults.standard.value(forKey: "lastProteinCheck") as! String
+        proteinLabel.text = "Protein: \(protein)" + " g"
         
         if(UserDefaults.standard.value(forKey: "allergiesFound") != nil)
         {
@@ -38,6 +49,17 @@ class ResultsViewController: UIViewController {
         
         
         // Do any additional setup after loading the view.
+    }
+    
+    
+    @IBAction func logOut(_ sender: Any) {
+        
+        Buddy.currentClient().logoutUser { (success) in
+            
+        }
+        
+        self.performSegue(withIdentifier: "goBackToLogin", sender: self)
+        
     }
 
     override func didReceiveMemoryWarning() {

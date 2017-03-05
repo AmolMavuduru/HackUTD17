@@ -93,22 +93,47 @@ class ReadNutritionViewController: UIViewController, UINavigationControllerDeleg
             let infoString = tesseract.recognizedText
             var strings = infoString?.components(separatedBy: "Calories")
             print(strings)
-            calorieList.append((strings?[1])!)
+            calorieList.append((strings?[1])! as! String)
             let userDefaults = UserDefaults.standard.set(calorieList, forKey: "calorieList")
             
             UserDefaults.standard.set((strings?[1])!, forKey: "lastCalorieCheck")
             
-            strings = infoString?.components(separatedBy: "Fat")
+            strings = infoString?.components(separatedBy: "Total Fat")
+            
+            if let splitStrings: [String] = strings![1].components(separatedBy: "g")
+            {
+            
+                var fatString = splitStrings[0] as! String
+                UserDefaults.standard.setValue(fatString, forKey: "lastFatCheck")
+            
+            }
             
             var allergies: String = UserDefaults.standard.value(forKey: "allergies") as! String
             
+            strings = infoString?.components(separatedBy: "Total Carbohydrate")
+            
+            if let stringSplit = strings?[1].components(separatedBy: "g")
+            {
+            
+            var carbsString = stringSplit[0] as! String
+            UserDefaults.standard.setValue(carbsString, forKey: "lastCarbsCheck")
+            }
+            
+            strings = infoString?.components(separatedBy: "Protein")
+            
+            if let stringSplit2 = strings?[1].components(separatedBy: "Vitamin A")
+            {
+                var proteinString = stringSplit2[0] as! String
+                UserDefaults.standard.setValue(proteinString, forKey: "lastProteinCheck")
+            }
+        
             if(infoString?.contains(allergies))!
             {
                 UserDefaults.standard.set(allergies, forKey: "allergiesFound")
             }
             else
             {
-                UserDefaults.standard.setNilValueForKey("allergiesFound")
+                UserDefaults.standard.set("", forKey: "allergiesFound")
             }
             
             self.performSegue(withIdentifier: "goToNutritionData", sender: self)
