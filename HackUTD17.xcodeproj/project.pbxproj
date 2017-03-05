@@ -20,6 +20,8 @@
 		3CE71CDF1E6B85D500BDD634 /* Ingredients.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3CE71CDE1E6B85D500BDD634 /* Ingredients.jpg */; };
 		3CE71CE91E6BBFDC00BDD634 /* SwiftOCR in Resources */ = {isa = PBXBuildFile; fileRef = 3CE71CE81E6BBFDC00BDD634 /* SwiftOCR */; };
 		3CE71CEB1E6BC4BF00BDD634 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE71CEA1E6BC4BF00BDD634 /* TableViewCell.swift */; };
+		3CE71CED1E6BD0A600BDD634 /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE71CEC1E6BD0A600BDD634 /* UserTableViewController.swift */; };
+		3CE71CEF1E6BD3D200BDD634 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE71CEE1E6BD3D200BDD634 /* ResultsViewController.swift */; };
 		FFFB1FE91C53F12B3F3F9587 /* Pods_HackUTD17.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A51F32C5B9983824B201C5 /* Pods_HackUTD17.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,9 +39,10 @@
 		3CE71CD81E6B809200BDD634 /* NutritionLabel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NutritionLabel.jpg; sourceTree = "<group>"; };
 		3CE71CDA1E6B83AF00BDD634 /* IMG_1700.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1700.JPG; sourceTree = "<group>"; };
 		3CE71CDE1E6B85D500BDD634 /* Ingredients.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Ingredients.jpg; sourceTree = "<group>"; };
-		3CE71CE11E6B8AC700BDD634 /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Base; path = Base.lproj/TableViewController.swift; sourceTree = "<group>"; };
 		3CE71CE81E6BBFDC00BDD634 /* SwiftOCR */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SwiftOCR; sourceTree = "<group>"; };
 		3CE71CEA1E6BC4BF00BDD634 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		3CE71CEC1E6BD0A600BDD634 /* UserTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewController.swift; sourceTree = "<group>"; };
+		3CE71CEE1E6BD3D200BDD634 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		7175B0FE3C56528D3809FF00 /* Pods-HackUTD17.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackUTD17.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackUTD17/Pods-HackUTD17.debug.xcconfig"; sourceTree = "<group>"; };
 		C4A51F32C5B9983824B201C5 /* Pods_HackUTD17.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackUTD17.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4833BEB88AA340B5120AF4B /* Pods-HackUTD17.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackUTD17.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackUTD17/Pods-HackUTD17.release.xcconfig"; sourceTree = "<group>"; };
@@ -82,8 +85,9 @@
 				3CE71CAA1E6B360800BDD634 /* ViewController.swift */,
 				3CE71CAC1E6B360800BDD634 /* Main.storyboard */,
 				3CE71CEA1E6BC4BF00BDD634 /* TableViewCell.swift */,
-				3CE71CE01E6B8AC700BDD634 /* TableViewController.swift */,
+				3CE71CEC1E6BD0A600BDD634 /* UserTableViewController.swift */,
 				3CE71CBC1E6B576F00BDD634 /* ReadNutritionViewController.swift */,
+				3CE71CEE1E6BD3D200BDD634 /* ResultsViewController.swift */,
 				3CE71CE81E6BBFDC00BDD634 /* SwiftOCR */,
 				3CE71CDE1E6B85D500BDD634 /* Ingredients.jpg */,
 				3CE71CD81E6B809200BDD634 /* NutritionLabel.jpg */,
@@ -246,7 +250,9 @@
 				3CE71CEB1E6BC4BF00BDD634 /* TableViewCell.swift in Sources */,
 				3CE71CAB1E6B360800BDD634 /* ViewController.swift in Sources */,
 				3CE71CBD1E6B576F00BDD634 /* ReadNutritionViewController.swift in Sources */,
+				3CE71CEF1E6BD3D200BDD634 /* ResultsViewController.swift in Sources */,
 				3CE71CBB1E6B45DA00BDD634 /* UserSetupViewController.swift in Sources */,
+				3CE71CED1E6BD0A600BDD634 /* UserTableViewController.swift in Sources */,
 				3CE71CA91E6B360800BDD634 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,14 +274,6 @@
 				3CE71CB21E6B360800BDD634 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		3CE71CE01E6B8AC700BDD634 /* TableViewController.swift */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3CE71CE11E6B8AC700BDD634 /* Base */,
-			);
-			name = TableViewController.swift;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

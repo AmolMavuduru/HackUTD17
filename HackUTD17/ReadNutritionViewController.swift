@@ -94,8 +94,13 @@ class ReadNutritionViewController: UIViewController, UINavigationControllerDeleg
             var strings = infoString?.components(separatedBy: "Calories")
             print(strings)
             calorieList.append((strings?[1])!)
-            let userDefaults = UserDefaults.standard
-            userDefaults.set(calorieList, forKey: "calorieList")
+            let userDefaults = UserDefaults.standard.set(calorieList, forKey: "calorieList")
+            
+            UserDefaults.standard.set((strings?[1])!, forKey: "lastCalorieCheck")
+            
+            strings = infoString?.components(separatedBy: "Fat")
+            
+            self.performSegue(withIdentifier: "goToNutritionData", sender: self)
             
             
         }

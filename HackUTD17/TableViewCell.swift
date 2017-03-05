@@ -9,9 +9,24 @@
 import UIKit
 
 class TableViewCell: UITableViewCell {
+    
+    @IBOutlet var itemNameLabel: UILabel!
+    
+    @IBOutlet var caloriesLabel: UILabel!
+    
+    @IBOutlet var carbsLabel: UILabel!
+    
+    @IBOutlet var proteinLabel: UILabel!
+    
+    @IBOutlet var fatsLabel: UILabel!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        var caloriesList: [String] = UserDefaults.value(forKey: "caloriesList") as! [String]
+        caloriesLabel.text = caloriesList[1];
+        
         // Initialization code
     }
 
