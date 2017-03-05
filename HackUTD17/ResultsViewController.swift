@@ -40,7 +40,8 @@ class ResultsViewController: UIViewController {
         
         if(UserDefaults.standard.value(forKey: "allergiesFound") != nil)
         {
-            allergyAlertsLabel.text = UserDefaults.standard.value(forKey: "allergiesFound") as! String!
+            allergyAlertsLabel.text = UserDefaults.standard.value(forKey: "allergies") as! String
+            
         }
         else
         {

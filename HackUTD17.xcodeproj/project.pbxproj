@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3C4B820D1E6C713F00638A11 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4B820C1E6C713F00638A11 /* StatsViewController.swift */; };
 		3C4B820F1E6C7F1300638A11 /* IngredientAllerg.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 3C4B820E1E6C7F1300638A11 /* IngredientAllerg.JPG */; };
+		3C4B82111E6C832F00638A11 /* Cropimage.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 3C4B82101E6C832F00638A11 /* Cropimage.JPG */; };
 		3CE71CA91E6B360800BDD634 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE71CA81E6B360800BDD634 /* AppDelegate.swift */; };
 		3CE71CAB1E6B360800BDD634 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE71CAA1E6B360800BDD634 /* ViewController.swift */; };
 		3CE71CAE1E6B360800BDD634 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CE71CAC1E6B360800BDD634 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		3C4B820C1E6C713F00638A11 /* StatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 		3C4B820E1E6C7F1300638A11 /* IngredientAllerg.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IngredientAllerg.JPG; sourceTree = "<group>"; };
+		3C4B82101E6C832F00638A11 /* Cropimage.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cropimage.JPG; sourceTree = "<group>"; };
 		3CE71CA51E6B360800BDD634 /* HackUTD17.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackUTD17.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CE71CA81E6B360800BDD634 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CE71CAA1E6B360800BDD634 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				3C4B820E1E6C7F1300638A11 /* IngredientAllerg.JPG */,
 				3CE71CD81E6B809200BDD634 /* NutritionLabel.jpg */,
 				3CE71CDA1E6B83AF00BDD634 /* IMG_1700.JPG */,
+				3C4B82101E6C832F00638A11 /* Cropimage.JPG */,
 				3CE71CBA1E6B45DA00BDD634 /* UserSetupViewController.swift */,
 				3CE71CCE1E6B71F300BDD634 /* tessdata */,
 				3CE71CAF1E6B360800BDD634 /* Assets.xcassets */,
@@ -187,6 +190,7 @@
 				3CE71CB31E6B360800BDD634 /* LaunchScreen.storyboard in Resources */,
 				3CE71CE91E6BBFDC00BDD634 /* SwiftOCR in Resources */,
 				3C4B820F1E6C7F1300638A11 /* IngredientAllerg.JPG in Resources */,
+				3C4B82111E6C832F00638A11 /* Cropimage.JPG in Resources */,
 				3CE71CB01E6B360800BDD634 /* Assets.xcassets in Resources */,
 				3CE71CDF1E6B85D500BDD634 /* Ingredients.jpg in Resources */,
 				3CE71CCF1E6B71F300BDD634 /* tessdata in Resources */,
