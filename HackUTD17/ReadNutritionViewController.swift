@@ -30,7 +30,7 @@ class ReadNutritionViewController: UIViewController, UINavigationControllerDeleg
     
     
     @IBAction func addImage(_ sender: UIButton) {
-        if productName.text == nil {
+        if productName.text == "" {
             errorLabel.isHidden = false
             
         } else {
@@ -57,7 +57,7 @@ class ReadNutritionViewController: UIViewController, UINavigationControllerDeleg
     }
 
     @IBAction func accessCamera(_ sender: Any) {
-        if productName.text == nil {
+        if productName.text == "" {
             errorLabel.isHidden = false
             
         } else {
@@ -76,7 +76,7 @@ class ReadNutritionViewController: UIViewController, UINavigationControllerDeleg
         {
 
             tesseract.delegate = self
-            tesseract.image = UIImage(named: "NutritionLabel.JPG")?.g8_blackAndWhite()
+            tesseract.image = UIImage(named: "IMG_1700.JPG")?.g8_blackAndWhite()
             //tesseract.image = UIImage(named: "NutritionLabel.jpg")?.g8_grayScale()
             
             var grayScaleImage = tesseract.image.g8_blackAndWhite()
@@ -99,6 +99,17 @@ class ReadNutritionViewController: UIViewController, UINavigationControllerDeleg
             UserDefaults.standard.set((strings?[1])!, forKey: "lastCalorieCheck")
             
             strings = infoString?.components(separatedBy: "Fat")
+            
+            var allergies: String = UserDefaults.standard.value(forKey: "allergies") as! String
+            
+            if(infoString?.contains(allergies))!
+            {
+                UserDefaults.standard.set(allergies, forKey: "allergiesFound")
+            }
+            else
+            {
+                UserDefaults.standard.setNilValueForKey("allergiesFound")
+            }
             
             self.performSegue(withIdentifier: "goToNutritionData", sender: self)
             

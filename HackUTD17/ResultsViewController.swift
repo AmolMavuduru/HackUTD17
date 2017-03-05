@@ -18,11 +18,24 @@ class ResultsViewController: UIViewController {
     @IBOutlet var proteinLabel: UILabel!
     
     
+    
+    @IBOutlet var allergyAlertsLabel: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         var calories = UserDefaults.standard.value(forKey: "lastCalorieCheck")
         caloriesLabel.text = "Calories: \(calories)"
+        
+        if(UserDefaults.standard.value(forKey: "allergiesFound") != nil)
+        {
+            allergyAlertsLabel.text = UserDefaults.standard.value(forKey: "allergiesFound") as! String!
+        }
+        else
+        {
+            allergyAlertsLabel.text = "No allergens found"
+        }
+        
         
         // Do any additional setup after loading the view.
     }

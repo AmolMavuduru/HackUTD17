@@ -17,9 +17,16 @@ class UserSetupViewController: UIViewController {
     @IBOutlet var ageSlider: UISlider!
     
     @IBOutlet var ageLabel: UILabel!
+    
+    @IBOutlet var weightField: UITextField!
+    
+    
+    @IBOutlet var allergyField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ageLabel.text = String(Int(5 + 115*(ageSlider.value))) + " years"
 
         // Do any additional setup after loading the view.
     }
@@ -34,6 +41,7 @@ class UserSetupViewController: UIViewController {
         
         if(genderSwitch.isOn)
         {
+            /*
             var params: [AnyHashable: Any] = ["userName": "SuperBuddy", "password": "p4ssw0rd", "gender": "Male", "dateOfBirth": "09/01/2016", "email": "support@buddy.com", "firstName": "First", "tag": "Some useful tag", "lastName": "Last", "profilePictureID": "bvc.bCkbbffnqbvq", "locationFuzz": (true)]
             Buddy.patch("User", parameters: params, class: Buddy.classForCoder(), callback: { (success, error) in
                 if error != nil {
@@ -45,7 +53,11 @@ class UserSetupViewController: UIViewController {
                     
                 }
             })
+               */
                 // Your callback code here
+            var userMale = true;
+            var userDefaults = UserDefaults.standard
+            userDefaults.setValue(allergyField.text, forKey: "allergies")
            
 
         }
@@ -54,7 +66,7 @@ class UserSetupViewController: UIViewController {
     
     @IBAction func ageChanged(_ sender: UISlider) {
         
-        ageLabel.text = String(Int(115*ageSlider.value + 5)) + " years"
+       ageLabel.text = String(Int(5 + 115*(ageSlider.value))) + " years"
         
     }
     
