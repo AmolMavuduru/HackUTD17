@@ -13,21 +13,35 @@ import TesseractOCR
 
 class ReadNutritionViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, G8TesseractDelegate {
     
+    var infoStrings: [String] = []
+    var calorieList: [String] = []
+    var fatList: [String] = []
+    var carbsList: [String] = []
+    var proteinList: [String] = []
     
+    
+    
+    @IBOutlet var errorLabel: UILabel!
     @IBOutlet var image: UIImageView!
+    @IBOutlet var productName: UITextField!
     
     
-    @IBOutlet var imageText: UITextView!
+    
     
     
     @IBAction func addImage(_ sender: UIButton) {
-        
+        if productName.text == nil {
+            errorLabel.isHidden = false
+            
+        } else {
+
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
         imagePicker.allowsEditing = false
         
         self.present(imagePicker, animated: true, completion: nil)
+        }
         
     }
     
@@ -42,33 +56,63 @@ class ReadNutritionViewController: UIViewController, UINavigationControllerDeleg
         
     }
 
-    
+    @IBAction func accessCamera(_ sender: Any) {
+        if productName.text == nil {
+            errorLabel.isHidden = false
+            
+        } else {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerControllerSourceType.camera
+            imagePicker.allowsEditing = false
+            
+            self.present(imagePicker, animated: true, completion: nil)
+            
+         }
+    }
     @IBAction func convertToText(_ sender: UIButton) {
         
         if let tesseract = G8Tesseract(language: "eng")
         {
 
             tesseract.delegate = self
-            tesseract.image = UIImage(named: "Ingredients.jpg")?.g8_blackAndWhite()
+            tesseract.image = UIImage(named: "NutritionLabel.JPG")?.g8_blackAndWhite()
             //tesseract.image = UIImage(named: "NutritionLabel.jpg")?.g8_grayScale()
             
             var grayScaleImage = tesseract.image.g8_blackAndWhite()
             image.image = grayScaleImage
-            
+           /* tesseract.charWhitelist = "qwetyuiopasdfhjklzxcvbnmQWERTYUIPASDFHJKXCVBNMZ1234567890%"*/
+//            tesseract.charWhitelist = " QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm1234567890.\n%"
             
             tesseract.recognize()
+            progressImageRecognition(for: tesseract)
+            print(tesseract.recognizedText)
             
-            imageText.text = tesseract.recognizedText
+            infoStrings.append(tesseract.recognizedText)
+            
+            let infoString = tesseract.recognizedText
+            var strings = infoString?.components(separatedBy: "Calories")
+            print(strings)
+            calorieList.append((strings?[1])!)
+            let userDefaults = UserDefaults.standard
+            userDefaults.set(calorieList, forKey: "calorieList")
+            
+            
         }
-        
         
         
     }
     
+    func progressImageRecognition(for tesseract: G8Tesseract!) {
+        print("Recognition Progress \(tesseract.progress) %")
+    }
+
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+errorLabel.isHidden = true
         // Do any additional setup after loading the view.
     }
 
